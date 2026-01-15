@@ -21,7 +21,11 @@ async function handleSearch(query: string) {
 
   const resultsContainer = document.getElementById('cheffs-search-results');
   if (resultsContainer) {
-    resultsContainer.innerHTML = '<div style="text-align: center; padding: 20px; color: #666;">Searching...</div>';
+    resultsContainer.innerHTML = '';
+    const loadingDiv = document.createElement('div');
+    loadingDiv.style.cssText = 'text-align: center; padding: 20px; color: #666;';
+    loadingDiv.textContent = 'Searching...';
+    resultsContainer.appendChild(loadingDiv);
   }
 
   try {
@@ -31,7 +35,11 @@ async function handleSearch(query: string) {
     displaySearchResults(filteredResults);
   } catch (error) {
     if (resultsContainer) {
-      resultsContainer.innerHTML = `<div style="background: #ffe6c4; border: 2px solid #ff6b6b; border-radius: 8px; padding: 16px; color: #2c2c2c; font-weight: 600;">Error: ${error instanceof Error ? error.message : 'Unknown error'}</div>`;
+      resultsContainer.innerHTML = '';
+      const errorDiv = document.createElement('div');
+      errorDiv.style.cssText = 'background: #ffe6c4; border: 2px solid #ff6b6b; border-radius: 8px; padding: 16px; color: #2c2c2c; font-weight: 600;';
+      errorDiv.textContent = `Error: ${error instanceof Error ? error.message : 'Unknown error'}`;
+      resultsContainer.appendChild(errorDiv);
     }
   }
 }

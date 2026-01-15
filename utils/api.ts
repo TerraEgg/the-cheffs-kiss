@@ -20,7 +20,8 @@ export async function searchProjects(query: string, apiKey: string): Promise<any
     headers: {
       'Authorization': `Bearer ${apiKey}`,
       'Content-Type': 'application/json',
-      'Accept': 'application/json'
+      'Accept': 'application/json',
+      'X-Flavortown-Ext-8456': 'true'
     }
   });
 

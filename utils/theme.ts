@@ -168,7 +168,7 @@ export function applyRecipieFinderTheme() {
   if (!footer) {
     footer = document.createElement('div');
     footer.className = 'recipie-finder-footer';
-    footer.textContent = 'Recipie Finder v0.0.1';
+    footer.textContent = 'The Cheffs Kiss v0.0.1';
     settingsModal.appendChild(footer);
   }
 
