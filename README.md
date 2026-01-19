@@ -2,7 +2,11 @@
 
 A extension for flavourtown that adds the ability to search
 
-## Quick setup
+## Quick setup - Firefox
+1. Go to https://addons.mozilla.org/addon/the-cheffs-kiss/
+2. Add the extension
+
+## Quick setup - Chrome
 1. Download the [latest release](https://github.com/TerraEgg/the-cheffs-kiss/releases)
 2. The scroll down and read through **Load the Extension**
 
@@ -23,12 +27,8 @@ npm run dev
 1. Go to `chrome://extensions/`
 2. Enable Developer mode
 3. Click "Load unpacked"
-4. Select the `.output/chrome` folder
+4. Select the zip folder 
 
-For Firefox:
-1. Go to `about:debugging#/runtime/this-firefox`
-2. Click "Load Temporary Add-on"
-3. Select the `.output/firefox` folder
 
 ### AI Notice
 AI was used to fix bugs and organise code (after development).
